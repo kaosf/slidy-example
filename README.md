@@ -160,4 +160,8 @@ watchb 'slidybuild < README.md > index.html' 'index\.html'
 <li>ブラウザでindex.htmlを開きindex.mdを編集しつつ更新</li>
 </ol>
 
+# このスライドのリポジトリ
+
+[kaosf/slidy-example](https://github.com/kaosf/slidy-example)
+
 # おしまい
