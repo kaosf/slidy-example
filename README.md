@@ -6,10 +6,7 @@
 
 ka
 
-<!-- [![Gravatar](https://gravatar.com/avatar/884be098693425b409d25aaec5091de8?s=150)](https://gravatar.com/ka000) -->
-
-
-[<img alt="Gravatar" src="https://gravatar.com/avatar/884be098693425b409d25aaec5091de8?s=150" width="150px" height="150px">](https://gravatar.com/ka000)
+[![Gravatar](https://gravatar.com/avatar/884be098693425b409d25aaec5091de8?s=150)](https://gravatar.com/ka000)
 
 Website: [kaosfield](http://www.kaosfield.net)
 
