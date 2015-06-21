@@ -209,6 +209,16 @@ README.mdを用意する
 <p>README.mdに書いておけばGitHub上などでリポジトリのトップページに<br />
 スライドの内容がざっと表示されることになるので便利そう．</p>
 </div>
+<div id="スライドの作られ方" class="slide section level1">
+<h1>スライドの作られ方</h1>
+<p><a href="https://github.com/kaosf/slidy-builder">Slidy Builder</a>によってslidy.cssとslidy.jsが<a href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css">ここ</a>と<a href="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js">ここ</a>からダウンロードされます．</p>
+<p>またindex.htmlの末尾にコメントとして</p>
+<pre class="sh"><code>pandoc --version</code></pre>
+<p>の結果を埋め込みます．再現性を担保するためです．</p>
+<p>また，その際に環境固有の情報を消すようにしています．</p>
+<p>このindex.htmlを生成するコマンドをinotifywaitコマンドで随時実行します．</p>
+<p>inotifywaitコマンドを生で使うのは大変なので補助ツールとして<a href="https://github.com/kaosf/bash-watch">Bash Watch</a>を使います．</p>
+</div>
 <div id="このスライドのリポジトリ" class="slide section level1">
 <h1>このスライドのリポジトリ</h1>
 <p><a href="https://github.com/kaosf/slidy-example">kaosf/slidy-example</a></p>
