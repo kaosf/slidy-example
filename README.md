@@ -160,23 +160,34 @@ watchb 'slidybuild < README.md > index.html' 'index\.html'
 README.mdに書いておけばGitHub上などでリポジトリのトップページに  
 スライドの内容がざっと表示されることになるので便利そう．
 
-# スライドの作られ方
+# スライドの作られ方(1)
 
-[Slidy Builder](https://github.com/kaosf/slidy-builder)によってslidy.cssとslidy.jsが[ここ](http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css)と[ここ](http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js)からダウンロードされます．
+[Slidy Builder](https://github.com/kaosf/slidy-builder)によってslidy.cssとslidy.jsが
 
-またindex.htmlの末尾にコメントとして
+<ul>
+<li>[http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css](http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css)</li>
+<li>[http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js](http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js)</li>
+</ul>
+
+からダウンロードされる
+
+# スライドの作られ方(2)
+
+index.htmlの末尾にコメントとして
 
 ```sh
 pandoc --version
 ```
 
-の結果を埋め込みます．再現性を担保するためです．
+の結果を再現性担保のために埋め込む
 
-また，その際に環境固有の情報を消すようにしています．
+念の為その際に環境固有の情報を消すようにしてある
 
-このindex.htmlを生成するコマンドをinotifywaitコマンドで随時実行します．
+# スライドの作られ方(3)
 
-inotifywaitコマンドを生で使うのは大変なので補助ツールとして[Bash Watch](https://github.com/kaosf/bash-watch)を使います．
+index.htmlを生成するコマンドをinotifywaitコマンドで随時実行する
+
+inotifywaitコマンドを生で使うのは大変なので補助ツールとして[Bash Watch](https://github.com/kaosf/bash-watch)を使う
 
 # このスライドのリポジトリ
 
