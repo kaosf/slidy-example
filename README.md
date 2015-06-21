@@ -157,7 +157,7 @@ m
 watchb 'slidybuild < README.md > index.html' 'index\.html'
 ```
 </li>
-<li>ブラウザでindex.htmlを開きindex.mdを編集しつつ更新</li>
+<li>ブラウザでindex.htmlを開きREADME.mdを編集しつつ更新</li>
 </ol>
 
 README.mdに書いておけばGitHub上などでリポジトリのトップページに  
