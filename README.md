@@ -130,6 +130,18 @@ m
 
 > これは引用文です
 
+# 数式
+
+$$1 + 2 = 3$$
+
+When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are
+
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+
+$$f(a) = \frac{1}{2\pi i}\oint_C\frac{f(z)}{z-a}dz$$
+
+$$f(x) = \sum^\infty_{n=0} \frac{f^{(n)}(a)}{n!}(x - a)^n$$
+
 # リスト順次表示と文章の混合
 
 即時表示の文章は
