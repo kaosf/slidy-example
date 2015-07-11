@@ -218,28 +218,25 @@ README.mdを用意する
 <p>README.mdに書いておけばGitHub上などでリポジトリのトップページに<br />
 スライドの内容がざっと表示されることになるので便利そう．</p>
 </div>
+<div id="スライドの作り方オフライン確認用" class="slide section level1">
+<h1>スライドの作り方(オフライン確認用)</h1>
+<p>オフラインで動作・見た目を確認を出来る状態にしたい場合</p>
+<p>以下のコマンドを走らせる</p>
+<pre class="sh"><code>watchb &#39;slidybuild -l &lt; README.md &gt; index.html&#39; &#39;index\.html&#39;</code></pre>
+<p>※先ほどと同様だがslidybuildコマンドに-lオプションを渡す</p>
+<p>必要なJavaScript，CSS，PNGファイルが一度だけローカルにダウンロードされる</p>
+<p>※MathJax.jsが176MBくらいあるので注意</p>
+<p>生成されるindex.htmlもそれを使うようになる</p>
+</div>
 <div id="スライドの作られ方1" class="slide section level1">
 <h1>スライドの作られ方(1)</h1>
-<p><a href="https://github.com/kaosf/slidy-builder">Slidy Builder</a>によってslidy.cssとslidy.jsが</p>
-<ul>
-<li>
-<a href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" class="uri">http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css</a>
-</li>
-<li>
-<a href="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js" class="uri">http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js</a>
-</li>
-</ul>
-<p>からダウンロードされる</p>
-</div>
-<div id="スライドの作られ方2" class="slide section level1">
-<h1>スライドの作られ方(2)</h1>
 <p>index.htmlの末尾にコメントとして</p>
 <pre class="sh"><code>pandoc --version</code></pre>
 <p>の結果を再現性担保のために埋め込む</p>
 <p>念の為その際に環境固有の情報を消すようにしてある</p>
 </div>
-<div id="スライドの作られ方3" class="slide section level1">
-<h1>スライドの作られ方(3)</h1>
+<div id="スライドの作られ方2" class="slide section level1">
+<h1>スライドの作られ方(2)</h1>
 <p>index.htmlを生成するコマンドをinotifywaitコマンドで随時実行する</p>
 <p>inotifywaitコマンドを生で使うのは大変なので補助ツールとして<a href="https://github.com/kaosf/bash-watch">Bash Watch</a>を使う</p>
 </div>

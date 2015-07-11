@@ -172,18 +172,25 @@ watchb 'slidybuild < README.md > index.html' 'index\.html'
 README.mdに書いておけばGitHub上などでリポジトリのトップページに  
 スライドの内容がざっと表示されることになるので便利そう．
 
+# スライドの作り方(オフライン確認用)
+
+オフラインで動作・見た目を確認を出来る状態にしたい場合
+
+以下のコマンドを走らせる
+
+```sh
+watchb 'slidybuild -l < README.md > index.html' 'index\.html'
+```
+
+※先ほどと同様だがslidybuildコマンドに-lオプションを渡す
+
+必要なJavaScript，CSS，PNGファイルが一度だけローカルにダウンロードされる
+
+※MathJax.jsが176MBくらいあるので注意
+
+生成されるindex.htmlもそれを使うようになる
+
 # スライドの作られ方(1)
-
-[Slidy Builder](https://github.com/kaosf/slidy-builder)によってslidy.cssとslidy.jsが
-
-<ul>
-<li>[http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css](http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css)</li>
-<li>[http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js](http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js)</li>
-</ul>
-
-からダウンロードされる
-
-# スライドの作られ方(2)
 
 index.htmlの末尾にコメントとして
 
@@ -195,7 +202,7 @@ pandoc --version
 
 念の為その際に環境固有の情報を消すようにしてある
 
-# スライドの作られ方(3)
+# スライドの作られ方(2)
 
 index.htmlを生成するコマンドをinotifywaitコマンドで随時実行する
 
