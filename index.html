@@ -8,48 +8,80 @@
   <meta name="generator" content="pandoc" />
   <meta name="author" content="著者名" />
   <title>タイトル</title>
-  <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" type="text/css" media="screen, projection, print"
-    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
-  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
     charset="utf-8" type="text/javascript"></script>
 </head>
 <body>
@@ -86,92 +118,59 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h3 id="ヘッダ3">ヘッダ3</h3>
 <p>文章</p>
 </div>
-<div id="リスト順次表示" class="slide section level1">
-<h1>リスト順次表示</h1>
-<pre class="md"><code>- リスト順次表示1
-- リスト順次表示2
-- リスト順次表示3</code></pre>
-<ul class="incremental">
-<li>リスト順次表示1</li>
-<li>リスト順次表示2</li>
-<li>リスト順次表示3</li>
-</ul>
-</div>
-<div id="順序付きリスト順次表示" class="slide section level1">
-<h1>順序付きリスト順次表示</h1>
-<pre class="md"><code>1. 順序付きリスト順次表示1
-2. 順序付きリスト順次表示2
-3. 順序付きリスト順次表示3</code></pre>
-<ol class="incremental" style="list-style-type: decimal">
-<li>順序付きリスト順次表示1</li>
-<li>順序付きリスト順次表示2</li>
-<li>順序付きリスト順次表示3</li>
-</ol>
-</div>
-<div id="リスト即時表示はhtmlタグ直書き" class="slide section level1">
-<h1>リスト即時表示はHTMLタグ直書き</h1>
+<div id="リスト表示" class="slide section level1">
+<h1>リスト表示</h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a>- <span class="st">リスト表示1</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="st">- リスト表示2</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="st">- リスト表示3</span></span></code></pre></div>
 <ul>
-<li>
-リスト即時表示1
-</li>
-<li>
-リスト即時表示2
-</li>
-<li>
-リスト即時表示3
-</li>
+<li>リスト表示1</li>
+<li>リスト表示2</li>
+<li>リスト表示3</li>
 </ul>
-<ol>
-<li>
-順序付きリスト即時表示1
-</li>
-<li>
-順序付きリスト即時表示2
-</li>
-<li>
-順序付きリスト即時表示3
-</li>
+</div>
+<div id="順序付きリスト表示" class="slide section level1">
+<h1>順序付きリスト表示</h1>
+<div class="sourceCode" id="cb2"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a>1. <span class="st">順序付きリスト表示1</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="st">2. 順序付きリスト表示2</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="st">3. 順序付きリスト表示3</span></span></code></pre></div>
+<ol style="list-style-type: decimal">
+<li>順序付きリスト表示1</li>
+<li>順序付きリスト表示2</li>
+<li>順序付きリスト表示3</li>
 </ol>
 </div>
-<div id="htmlソース" class="slide section level1">
-<h1>HTMLソース</h1>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;ul&gt;</span>
-<span class="kw">&lt;li&gt;</span>リスト即時表示1<span class="kw">&lt;/li&gt;</span>
-<span class="kw">&lt;li&gt;</span>リスト即時表示2<span class="kw">&lt;/li&gt;</span>
-<span class="kw">&lt;li&gt;</span>リスト即時表示3<span class="kw">&lt;/li&gt;</span>
-<span class="kw">&lt;/ul&gt;</span>
-
-<span class="kw">&lt;ol&gt;</span>
-<span class="kw">&lt;li&gt;</span>順序付きリスト即時表示1<span class="kw">&lt;/li&gt;</span>
-<span class="kw">&lt;li&gt;</span>順序付きリスト即時表示2<span class="kw">&lt;/li&gt;</span>
-<span class="kw">&lt;li&gt;</span>順序付きリスト即時表示3<span class="kw">&lt;/li&gt;</span>
-<span class="kw">&lt;/ol&gt;</span></code></pre></div>
-<p>この程度はさすがに面倒臭くはない</p>
-<p>もしかしたらデフォルトの挙動を変える設定があるかも？</p>
+<div id="リストの順次表示をさせたい場合" class="slide section level1">
+<h1>リストの順次表示をさせたい場合</h1>
+<p>バージョン2.1.0から即時表示をデフォルトにした</p>
+<p>以下のようなHTMLから無理矢理クラスを削るようにしてある</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">&lt;ul</span><span class="ot"> class=</span><span class="st">&quot;incremental&quot;</span><span class="kw">&gt;&lt;/ul&gt;</span></span></code></pre></div>
+<p>順次表示の方がデフォルトなのが段々嫌になってきたため</p>
+<p>なので大変面倒ではあるが生成後のHTMLにこれを手動で追加してやる</p>
 </div>
 <div id="ソースコード" class="slide section level1">
 <h1>ソースコード</h1>
 <p>C言語</p>
-<div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c"><span class="ot">#include &lt;stdio.h&gt;</span>
-
-<span class="dt">int</span> main(<span class="dt">int</span> argc, <span class="dt">char</span> *argv[])
-{
-  printf(<span class="st">&quot;Hello, world!</span><span class="ch">\n</span><span class="st">&quot;</span>);
-  <span class="kw">return</span> <span class="dv">0</span>;
-}</code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb4-1"><a href="#cb4-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="dt">int</span> main(<span class="dt">int</span> argc, <span class="dt">char</span> *argv[])</span>
+<span id="cb4-4"><a href="#cb4-4"></a>{</span>
+<span id="cb4-5"><a href="#cb4-5"></a>  printf(<span class="st">&quot;Hello, world!</span><span class="sc">\n</span><span class="st">&quot;</span>);</span>
+<span id="cb4-6"><a href="#cb4-6"></a>  <span class="cf">return</span> <span class="dv">0</span>;</span>
+<span id="cb4-7"><a href="#cb4-7"></a>}</span></code></pre></div>
 </div>
 <div id="ソースコード-1" class="slide section level1">
 <h1>ソースコード</h1>
 <p>Ruby</p>
-<div class="sourceCode"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span class="kw">def</span> m
-  puts <span class="st">&#39;Hello, world!&#39;</span>
-<span class="kw">end</span>
-
-m</code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">def</span> m</span>
+<span id="cb5-2"><a href="#cb5-2"></a>  puts <span class="st">&#39;Hello, world!&#39;</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="kw">end</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a></span>
+<span id="cb5-5"><a href="#cb5-5"></a>m</span></code></pre></div>
 </div>
 <div id="引用文" class="slide section level1">
 <h1>引用文</h1>
-<div class="sourceCode"><pre class="sourceCode markdown"><code class="sourceCode markdown">&gt;<span class="dt"> これは引用文です</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1"></a>&gt;<span class="dt"> これは引用文です</span></span></code></pre></div>
 <blockquote>
 <p>これは引用文です</p>
 </blockquote>
@@ -200,7 +199,7 @@ $$f(x) = \sum^\infty_{n=0} \frac{f^{(n)}(a)}{n!}(x - a)^n$$</code></pre>
 <div id="リスト順次表示と文章の混合" class="slide section level1">
 <h1>リスト順次表示と文章の混合</h1>
 <p>即時表示の文章は</p>
-<ul class="incremental">
+<ul>
 <li>後から</li>
 <li>こちらが</li>
 <li>表示される</li>
@@ -222,7 +221,7 @@ README.mdを用意する
 </li>
 <li>
 <p>以下のコマンドを走らせる</p>
-<pre class="sh"><code>watchb &#39;slidybuild &lt; README.md &gt; index.html&#39; &#39;index\.html&#39;</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="ex">watchb</span> <span class="st">&#39;slidybuild &lt; README.md &gt; index.html&#39;</span> <span class="st">&#39;index\.html&#39;</span></span></code></pre></div>
 </li>
 <li>
 ブラウザでindex.htmlを開きREADME.mdを編集しつつ更新
@@ -235,7 +234,7 @@ README.mdを用意する
 <h1>スライドの作り方(オフライン確認用)</h1>
 <p>オフラインで動作・見た目を確認を出来る状態にしたい場合</p>
 <p>以下のコマンドを走らせる</p>
-<pre class="sh"><code>watchb &#39;slidybuild -l &lt; README.md &gt; index.html&#39; &#39;index\.html&#39;</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="ex">watchb</span> <span class="st">&#39;slidybuild -l &lt; README.md &gt; index.html&#39;</span> <span class="st">&#39;index\.html&#39;</span></span></code></pre></div>
 <p>※先ほどと同様だがslidybuildコマンドに-lオプションを渡す</p>
 <p>必要なJavaScript，CSS，PNGファイルが一度だけローカルにダウンロードされる</p>
 <p>※MathJax.jsが176MBくらいあるので注意</p>
@@ -244,7 +243,7 @@ README.mdを用意する
 <div id="スライドの作られ方1" class="slide section level1">
 <h1>スライドの作られ方(1)</h1>
 <p>index.htmlの末尾にコメントとして</p>
-<pre class="sh"><code>pandoc --version</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1"></a><span class="ex">pandoc</span> --version</span></code></pre></div>
 <p>の結果を再現性担保のために埋め込む</p>
 <p>念の為その際に環境固有の情報を消すようにしてある</p>
 </div>
@@ -263,24 +262,10 @@ README.mdを用意する
 </body>
 </html>
 <!-- Pandoc version:
-pandoc 1.15.2.1
-Compiled with texmath 0.8.4, highlighting-kate 0.6.
-Syntax highlighting is supported for the following languages:
-    abc, actionscript, ada, agda, apache, asn1, asp, awk, bash, bibtex, boo, c,
-    changelog, clojure, cmake, coffee, coldfusion, commonlisp, cpp, cs, css,
-    curry, d, diff, djangotemplate, dockerfile, dot, doxygen, doxygenlua, dtd,
-    eiffel, email, erlang, fasm, fortran, fsharp, gcc, glsl, gnuassembler, go,
-    haskell, haxe, html, idris, ini, isocpp, java, javadoc, javascript, json,
-    jsp, julia, kotlin, latex, lex, lilypond, literatecurry, literatehaskell,
-    lua, m4, makefile, mandoc, markdown, mathematica, matlab, maxima, mediawiki,
-    metafont, mips, modelines, modula2, modula3, monobasic, nasm, noweb,
-    objectivec, objectivecpp, ocaml, octave, opencl, pascal, perl, php, pike,
-    postscript, prolog, pure, python, r, relaxng, relaxngcompact, rest, rhtml,
-    roff, ruby, rust, scala, scheme, sci, sed, sgml, sql, sqlmysql,
-    sqlpostgresql, tcl, tcsh, texinfo, verilog, vhdl, xml, xorg, xslt, xul,
-    yacc, yaml, zsh
+pandoc 2.7.3
+Compiled with pandoc-types 1.17.5.4, texmath 0.11.2.2, skylighting 0.8.2
 Default user data directory: <DELETED>
-Copyright (C) 2006-2015 John MacFarlane
+Copyright (C) 2006-2019 John MacFarlane
 Web:  http://pandoc.org
 This is free software; see the source for copying conditions.
 There is no warranty, not even for merchantability or fitness
