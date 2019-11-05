@@ -8,7 +8,7 @@ ka
 
 [![Gravatar](https://gravatar.com/avatar/884be098693425b409d25aaec5091de8?s=150)](https://gravatar.com/ka000)
 
-Website: [kaosfield](http://www.kaosfield.net)
+Website: [kaosfield](https://www.kaosfield.net/)
 
 Twitter: [ka](https://twitter.com/ka_)
 
@@ -18,7 +18,7 @@ GitHub: [kaosf](https://github.com/kaosf)
 
 [![CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-Copyright (C) 2015 ka
+Copyright (C) 2019 ka
 
 # ヘッダ
 
